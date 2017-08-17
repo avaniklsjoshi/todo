@@ -56,12 +56,11 @@ app.post('/api/todos', function(req, res) {
     }, function(err, todo) {
         if (err)
             res.send(err);
-
         // get and return all the todos after you create another
         Todo.find(function(err, todos) {
             if (err)
                 res.send(err)
-            res.json(todos);
+            res.json(todos);;
         });
     });
 
